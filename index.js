@@ -5,6 +5,7 @@ const sequelize = require("./config");
 const departmentRoutes = require("./routes/department");
 const employeeRoutes = require("./routes/employee");
 const studentsRoutes = require("./routes/student");
+const tasksRoutes = require("./routes/task");
 var cors = require("cors");
 const app = express();
 // this allows working with url encoded data
@@ -18,6 +19,7 @@ app.use(cors());
 app.use(departmentRoutes);
 app.use(employeeRoutes);
 app.use(studentsRoutes);
+app.use(tasksRoutes);
 
 // testing database connection (asyncronous operation)
 sequelize
